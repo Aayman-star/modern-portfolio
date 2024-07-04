@@ -8,7 +8,7 @@ const Main = ({ children }: Props) => {
   const { theme, setTheme } = useTheme();
   return (
     <main
-      className={`w-full md:w-[80%] h-[100vh]  bg-background border-r-[1px] ${
+      className={`w-full min-h-screen md:w-[80%] md:h-[100vh]  bg-background border-r-[1px] ${
         theme === "dark" ? "border-muted" : "border-slate-700/50"
       }`}>
       {children}
