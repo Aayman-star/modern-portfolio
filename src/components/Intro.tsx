@@ -13,6 +13,8 @@ import Link from "next/link";
 import { navLinks } from "@/lib/Data";
 
 const Intro = () => {
+  /*Test comment*/
+  /**This is where the theme is mentioned */
   const { theme, setTheme } = useTheme();
   return (
     <div className="flex flex-col items-center justify-between">
