@@ -9,12 +9,31 @@ import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 
+import Link from "next/link";
+import { navLinks } from "@/lib/Data";
+
 const Intro = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <>
-      <div className="w-full  flex flex-col items-center md:flex-row md:items-center  justify-center py-8 ">
-        <div className="w-[8rem] h-[8rem] rounded-full bg-purple-500">
+    <div className="flex flex-col items-center justify-between">
+      <header className="w-full  h-10  fixed top-4">
+        <nav className="w-[80%] md:w-[35%] mx-auto h-full bg-muted rounded-md">
+          <ul className="w-[75%] md:w-[85%] h-full mx-auto flex items-center justify-between">
+            {navLinks.map((item, i) => (
+              <li key={i}>
+                <Link className="hidden md:block" href={item.link}>
+                  {item.name}
+                </Link>
+                <Link href={item.link}>
+                  <item.linkIcon className="w-6 h-6 md:hidden" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+      <div className="w-full  flex flex-col items-center md:flex-row md:items-center  justify-center px-4 py-8 mt-10">
+        <div className="w-[8rem] h-[8rem] rounded-full">
           <Image
             className="rounded-full"
             src={dp}
@@ -62,7 +81,7 @@ const Intro = () => {
         </div>
       </div>
       <hr className="w-[80%] mx-auto border-slate-500/50 border-px" />
-    </>
+    </div>
   );
 };
 

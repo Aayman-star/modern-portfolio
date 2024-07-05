@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Intro from "@/components/Intro";
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,9 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <div className="w-full bg-background">
-            <div className="w-full  lg:max-w-4xl lg:mx-auto flex items-center justify-center">
-              {" "}
-              <Header />
+            <div className="w-full min-h-screen lg:max-w-4xl lg:mx-auto flex flex-col items-center">
               {children}
             </div>
           </div>

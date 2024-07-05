@@ -1,3 +1,27 @@
+import { GiSkills } from "react-icons/gi";
+import { GrAchievement } from "react-icons/gr";
+import { MdCastForEducation } from "react-icons/md";
+import { MdWorkHistory } from "react-icons/md";
+import { HomeIcon } from "@radix-ui/react-icons";
+import { IconType } from "react-icons";
+import { HiHome } from "react-icons/hi";
+
+export const navLinks: Array<{
+  name: string;
+  link: string;
+  linkIcon: IconType;
+}> = [
+  { name: "Home", link: "/", linkIcon: HiHome },
+  { name: "Experience", link: "/Experience", linkIcon: MdWorkHistory },
+  {
+    name: "Qualifications",
+    link: "/Qualifications",
+    linkIcon: MdCastForEducation,
+  },
+  { name: "Achievements", link: "/Achievements", linkIcon: GrAchievement },
+  { name: "Skills", link: "/Skills", linkIcon: GiSkills },
+];
+
 export const Title = "Your Name";
 export const Subtitle = "Your Occupation";
 export const AboutText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
